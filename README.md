@@ -4,13 +4,19 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project lets you record and voice and then play it.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Widgets used in HomePage:
+  - Scaffold
+      - AppBar to put the title of the page on it
+      - body
+          - Column to put widgets vertically
+              - GlobalButton with mic shape
+                  - when this button is pressed, it checks if it's already recording, then stop it
+                  - if it's not, it requests user permission to use microphone
+                  - then, it checks if it's not playing an audio and mic permission is granted, then it will start recording
+              - Message to show "Recording.." if it's recording
+              - - GlobalButton with play shape
+                  - when this button is pressed, it checks if it's already playing an audio, then stop it
+                  - if it's not, it checks if it's not recording an audio, then it will start playing the recorded audio
+              - Message to show "Playing.." if it's playing the audio
